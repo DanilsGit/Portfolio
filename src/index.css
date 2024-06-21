@@ -1,0 +1,26 @@
+body {
+    width: 100%;
+    font-size: 16px;
+    overflow-x: hidden;
+    @media screen and (max-width: 1200px) {
+        font-size: 14px;
+    }
+    @media screen and (max-width: 1000px) {
+        font-size: 13px;
+    }
+    @media screen and (max-width: 700px) {
+        font-size: 12px;
+    }
+    @media screen and (max-width: 600px) {
+        font-size: 11px;
+    }
+    @media screen and (max-width: 500px) {
+        font-size: 10px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
