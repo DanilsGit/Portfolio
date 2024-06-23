@@ -2,8 +2,8 @@
   <main class="main">
     <WelcomeSection />
     <Technologies />
-    <Experience />
     <Projects />
+    <Experience />
   </main>
 </template>
 
