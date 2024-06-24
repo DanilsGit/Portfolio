@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
+    "sass": "^1.77.6",
+    "sass-loader": "^14.2.1",
     "vite": "^5.2.0"
   }
 }

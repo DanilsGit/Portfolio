@@ -132,27 +132,8 @@ const animateBoxContainerRight = (boxContainer) => {
     return tl
 }
 
-const animationTitle = (title) => {
-    const tl = gsap.timeline()
-    tl.to(title, {
-        duration: 2,
-        opacity: 1,
-        top: 0,
-        ease: 'circ.out',
-    })
-    return tl
-}
-
 // Animar las cajas cuando se monta el componente
 onMounted(() => {
-    ScrollTrigger.create({
-        animation: animationTitle('.technologies-title'),
-        trigger: '.technologies-section',
-        start: 'top 80%',
-        end: 'bottom 80%',
-        scrub: 1,
-        markers: false,
-    })
     ScrollTrigger.create({
         animation: animateBox('.box'),
         trigger: '.Gsap-box',

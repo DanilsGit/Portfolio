@@ -7,11 +7,38 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
 import GsapBox from './GsapBox.vue'
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+    const animationTitle = (title) => {
+        const tl = gsap.timeline()
+        tl.to(title, {
+            duration: 2,
+            opacity: 1,
+            top: 0,
+            ease: 'circ.out',
+        })
+        return tl
+    }
+
+    ScrollTrigger.create({
+        animation: animationTitle('.technologies-title'),
+        trigger: '.technologies-section',
+        start: 'top 80%',
+        end: 'bottom 80%',
+        scrub: 1,
+        markers: false,
+    })
+})
+
 </script>
 
 <style scoped>
-.technologies-title{
+.technologies-title {
     font-size: 3em;
     margin-bottom: 1em;
     font-weight: 600;
@@ -29,5 +56,4 @@ import GsapBox from './GsapBox.vue'
     align-items: center;
     width: 100%;
 }
-
 </style>
