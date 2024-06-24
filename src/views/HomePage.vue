@@ -25,6 +25,6 @@ onMounted(() => {
 .main {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 5em;
 }
 </style>

@@ -10,7 +10,7 @@
             </li>
             <li>
                 <router-link :to="{ name: 'home' }">About</router-link>
-                <router-link :to="{ name: 'projects' }">Contact</router-link>
+                <router-link :to="{ name: 'home' }">Contact</router-link>
             </li>
         </ul>
     </nav>

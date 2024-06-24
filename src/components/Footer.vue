@@ -1,7 +1,8 @@
 <template>
     <section class="footer">
         <div class="footer-content">
-            <p>© 2021 - All rights reserved</p>
+            <p>© 2024 - All rights reserved</p>
+            <p>In construction... 🚧</p>
         </div>
     </section>
 </template>
@@ -14,5 +15,4 @@
 .footer {
     height: 20vh;
 }
-
 </style>
