@@ -55,5 +55,6 @@ onMounted(() => {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    overflow: hidden;
 }
 </style>
