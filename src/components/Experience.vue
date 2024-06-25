@@ -141,7 +141,7 @@ onMounted(() => {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .experience-h1 {
     opacity: 0;
     position: relative;
@@ -149,5 +149,9 @@ onMounted(() => {
     font-size: 2.5em;
     font-weight: 700;
     text-align: center;
+}
+.experience-section{
+    padding-top: 25vh;
+    background-color: $semi-black;
 }
 </style>

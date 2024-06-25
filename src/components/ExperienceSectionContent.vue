@@ -105,7 +105,7 @@ onMounted(() => {
 }
 
 .experience-section-content p {
-    font-size: clamp(1.4em, 2.5vw, 2em);
+    font-size: clamp(1em, 2vw, 1.9em);
     line-height: 1.4;
 }
 

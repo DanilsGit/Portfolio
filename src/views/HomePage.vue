@@ -1,6 +1,6 @@
 <template>
     <main class="main">
-        <WelcomeSection />
+        <PresentationSection />
         <Technologies />
         <Experience />
         <Footer />
@@ -11,9 +11,11 @@
 import WelcomeSection from '../components/WelcomeSection.vue'
 import Technologies from '../components/Technologies.vue'
 import Experience from '../components/Experience.vue'
+import PresentationSection from '../components/PresentationSection.vue'
 import Footer from '../components/Footer.vue'
 
 import { onMounted } from 'vue'
+
 
 onMounted(() => {
     document.title = 'Danils Portfolio'
@@ -25,6 +27,6 @@ onMounted(() => {
 .main {
     display: flex;
     flex-direction: column;
-    gap: 5em;
+    overflow: hidden;
 }
 </style>

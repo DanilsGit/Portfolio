@@ -11,8 +11,9 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .footer {
     height: 20vh;
+    background-color: $semi-black;
 }
 </style>

@@ -29,7 +29,7 @@
     padding: 0.5em;
     justify-content: space-around;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 
     ul {
         display: flex;

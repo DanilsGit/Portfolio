@@ -37,7 +37,7 @@ onMounted(() => {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .technologies-title {
     font-size: 3em;
     margin-bottom: 1em;
@@ -56,5 +56,6 @@ onMounted(() => {
     align-items: center;
     width: 100%;
     overflow: hidden;
+    background-color: $semi-black;
 }
 </style>
