@@ -19,14 +19,15 @@
             <h1>About me</h1>
 
             <p>
-                I am a dedicated web developer with a passion for creating functional and engaging websites. 
+                I am a dedicated web developer with a passion for creating functional and engaging websites.
                 My experience spans multiple programming languages, including Java, C++, and Python,
                 enabling me to build diverse and robust software solutions. I am proficient in modern frontend
                 frameworks like Vue.js and React.js, which I utilize to enhance user experiences and interface
                 design. Additionally, I enjoy sharing my knowledge on my YouTube channel, where I cover various
                 topics related to boolean division algorithms, unit conversions, binary adders,
-                protoboard usage, automata, isomorphic graphs, regular graphs, bipartite graphs, and Dijkstra's algorithm. 
-                I also take pleasure in solving logic problems with Java, continually seeking opportunities to learn new 
+                protoboard usage, automata, isomorphic graphs, regular graphs, bipartite graphs, and Dijkstra's
+                algorithm.
+                I also take pleasure in solving logic problems with Java, continually seeking opportunities to learn new
                 technologies and improve my skills.
             </p>
         </section>

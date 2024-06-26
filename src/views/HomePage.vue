@@ -2,6 +2,7 @@
     <main class="main">
         <PresentationSection />
         <Technologies />
+        <GoToProjects />
         <Experience />
         <Footer />
     </main>
@@ -15,6 +16,7 @@ import PresentationSection from '../components/PresentationSection.vue'
 import Footer from '../components/Footer.vue'
 
 import { onMounted } from 'vue'
+import GoToProjects from '../components/GoToProjects.vue'
 
 
 onMounted(() => {

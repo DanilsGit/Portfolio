@@ -35,21 +35,21 @@ const proj = [
         description: 'Rippio is a web application that connects clients with restaurants, utilizing technologies such as React, Node.js, Express, and PostgreSQL. Users can search for restaurants and products, modify their profiles, and add products to their cart for purchasing. Restaurants can create profiles, upload and manage their products, handle orders, and manage their schedules. Rippio aims to streamline the interaction between clients and restaurants, enhancing the dining experience for all users.',
         tech: 'REACT POSTGRESQL NODE.JS EXPRESS.JS',
         img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Frippio.png?alt=media&token=6604df66-e07f-4d40-bbbb-785af00ef46d',
-        link: 'https://github.com/danilsgit'
+        link: 'https://github.com/DanilsGit/Rippio'
     },
     {
         name: 'Cellular automaton',
         description: 'This project is a cellular automaton simulation with three states, developed using React and JavaScript. The simulation represents three political groups, allowing users to observe political segregation. The interface includes options to step through the simulation one iteration at a time, start the simulation, and reset it. This visualization helps illustrate how political segregation can evolve over time based on initial conditions and interaction rules.',
         tech: 'REACT JS',
         img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fvida.png?alt=media&token=7690e2c0-a91c-4ec7-9176-a612b65f26e3',
-        link: 'https://github.com/danilsgit'
+        link: 'https://github.com/jfmonsa/capitalism_simulator'
     },
     {
         name: 'Numerical Methods',
         description: 'This project is a numerical methods application developed using Python, Tkinter, and Matplotlib. It allows users to solve equations within a given range using methods such as bisection, fixed point, and curve fitting. The interface provides visual representations of the solutions, making it easier to understand the behavior of the functions. Users can input their functions and intervals, and the application will compute and display the solutions along with detailed graphs.',
         tech: 'PYTHON TKINTER',
         img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fmetodos.png?alt=media&token=a6fe3780-5a95-4e68-abfd-2a2a31a1bced',
-        link: 'https://github.com/danilsgit'
+        link: 'https://github.com/DanilsGit/learning/blob/main/M%C3%A9todos%20Num%C3%A9ricos%20en%20py/metodos.py'
     },
     {
         name: 'Store Manager',
