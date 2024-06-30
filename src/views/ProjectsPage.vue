@@ -56,28 +56,28 @@ const proj = [
         description: 'This project is a store management system developed using Java and PostgreSQL. It features a CRUD (Create, Read, Update, Delete) interface that allows employees to manage various aspects of the store. Employees can log in with their ID and password to access the system. This system streamlines the management processes within the store, making it easier for employees to handle their daily tasks efficiently.',
         tech: 'JAVA POSTGRESQL',
         img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fmibarrio.png?alt=media&token=b978a437-96b5-4a3f-a2eb-bf100dba55dc',
-        link: 'https://github.com/danilsgit'
+        link: 'https://github.com/DanilsGit/Store-Manager'
     },
     {
         name: 'Vacation Calculator',
         description: 'The Vacation Calculator is a simple application developed using Java that helps calculate vacation days for employees based on their department and tenure. It features a user-friendly interface, making it easy for older clients and departments to determine the number of vacation days an employee is eligible for.',
         tech: 'Java',
         img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fpepsi.png?alt=media&token=83a526e4-7f93-42cf-bc9c-d7137f2a75e9',
-        link: 'https://github.com/danilsgit'
+        link: 'https://github.com/DanilsGit/Vacation-Calculator-Pepsi'
     },
     {
         name: 'Hospital Manager',
         description: 'The Hospital Manager App is a console-based application developed in C++ designed to manage various hospital profiles efficiently. It allows for the creation, reading, updating, and deletion (CRUD) of profiles such as managers, professionals, healthcare personnel, receptionists, and patients, all through a simple console interface. This application does not use a graphical user interface (GUI) or REST APIs, ensuring straightforward operation and data management. Ideal for scenarios requiring a no-frills, console-based solution, the Hospital Manager App provides a streamlined approach to handling hospital management tasks effectively.',
         tech: 'C++ OOP',
         img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fgestion%20de%20hospital.png?alt=media&token=bf8673bf-0151-4a81-af15-968bc2dcad5e',
-        link: 'https://github.com/danilsgit'
+        link: 'https://github.com/DanilsGit/Hospital-Manager'
     },
     {
         name: 'calculator',
         description: "The Calculator App is a Java application that emulates the functionality of the Windows calculator, offering basic operations. It includes standard arithmetic functions such as addition, subtraction, multiplication, and division, along with more complex operations like power calculations (pow). The app also features 'C' (clear) and 'CE' (clear entry) buttons for efficient error handling. Designed for continuous operations, it allows users to perform multiple calculations in sequence without resetting the app, providing a seamless and user-friendly experience.",
         tech: 'JAVA',
         img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fcalculadora.png?alt=media&token=a963288c-bf01-46bc-add6-ec01d988a1f1',
-        link: 'https://github.com/danilsgit'
+        link: 'https://github.com/DanilsGit/Basic-Calculator'
     }
 ]
 

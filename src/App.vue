@@ -9,8 +9,8 @@
                 <h2>Danils Portfolio</h2>
             </li>
             <li>
-                <router-link :to="{ name: 'home' }">About</router-link>
-                <router-link :to="{ name: 'home' }">Contact</router-link>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
             </li>
         </ul>
     </nav>
@@ -90,5 +90,6 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 </style>

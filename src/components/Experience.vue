@@ -1,5 +1,5 @@
 <template>
-    <section class="experience-section">
+    <section id="experience" class="experience-section">
         <h1 class="experience-h1">Would You Like to Know More About Me?</h1>
         <ExperienceSectionContent :experience="experience" />
     </section>
