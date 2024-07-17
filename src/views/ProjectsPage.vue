@@ -38,6 +38,13 @@ const proj = [
         link: 'https://github.com/DanilsGit/Rippio'
     },
     {
+        name: 'Gymstats',
+        description: 'GymStats is a web application built with VUE, GO, DOCKER, POSTGRESQL and AWS designed to help you track and manage your workout routines effectively. With GymStats, you can create and view exercise routines from anywhere in the world using your mobile device or computer. The application allows you to customize your routines with your preferred exercises and adjust sets based on your progress. Additionally, you can add notes to exercises to remember specific details.',
+        tech: 'VUE GO DOCKER POSTGRESQL AWS',
+        img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fgymstats.png?alt=media&token=2b847b2f-bedf-4dba-a410-ebc7c55bd020',
+        link: 'https://github.com/DanilsGit/gym-stats.git'
+    },
+    {
         name: 'Cellular automaton',
         description: 'This project is a cellular automaton simulation with three states, developed using React and JavaScript. The simulation represents three political groups, allowing users to observe political segregation. The interface includes options to step through the simulation one iteration at a time, start the simulation, and reset it. This visualization helps illustrate how political segregation can evolve over time based on initial conditions and interaction rules.',
         tech: 'REACT JS',
@@ -266,14 +273,14 @@ p {
     position: absolute;
     top: 50%;
     left: 70%;
-    transform: translate(-50%, -50%) translateZ(-15000px);
+    transform: translate(-50%, -50%) translateZ(-17500px);
 }
 
 #slide-2 {
     position: absolute;
     top: 50%;
     left: 30%;
-    transform: translate(-50%, -50%) translateZ(-12500px);
+    transform: translate(-50%, -50%) translateZ(-15000px);
     opacity: 0;
 }
 
@@ -281,14 +288,14 @@ p {
     position: absolute;
     top: 50%;
     left: 70%;
-    transform: translate(-50%, -50%) translateZ(-10000px);
+    transform: translate(-50%, -50%) translateZ(-12500px);
 }
 
 #slide-4 {
     position: absolute;
     top: 50%;
     left: 30%;
-    transform: translate(-50%, -50%) translateZ(-7500px);
+    transform: translate(-50%, -50%) translateZ(-10000px);
     opacity: 0;
 }
 
@@ -296,14 +303,14 @@ p {
     position: absolute;
     top: 50%;
     left: 70%;
-    transform: translate(-50%, -50%) translateZ(-5000px);
+    transform: translate(-50%, -50%) translateZ(-7500px);
 }
 
 #slide-6 {
     position: absolute;
     top: 50%;
     left: 30%;
-    transform: translate(-50%, -50%) translateZ(-2500px);
+    transform: translate(-50%, -50%) translateZ(-5000px);
     opacity: 0.5;
 }
 
@@ -311,7 +318,17 @@ p {
     position: absolute;
     top: 50%;
     left: 70%;
+    transform: translate(-50%, -50%) translateZ(-2500px);
+    opacity: 1;
+}
+
+#slide-8 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
     transform: translate(-50%, -50%) translateZ(0px);
     opacity: 1;
 }
+
+
 </style>
