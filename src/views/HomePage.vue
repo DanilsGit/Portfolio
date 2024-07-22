@@ -4,6 +4,7 @@
         <Technologies />
         <GoToProjects />
         <Experience />
+        <Contact />
         <Footer />
     </main>
 </template>
@@ -17,6 +18,7 @@ import Footer from '../components/Footer.vue'
 
 import { onMounted } from 'vue'
 import GoToProjects from '../components/GoToProjects.vue'
+import Contact from '../components/Contact.vue'
 
 
 onMounted(() => {
