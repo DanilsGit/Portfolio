@@ -1,5 +1,20 @@
 <template>
-    <nav class="router-nav">
+    <nav class="router-nav" v-if="$i18n.locale === 'es'">
+        <ul>
+            <li>
+                <router-link :to="{ name: 'home' }">Inicio</router-link>
+                <router-link :to="{ name: 'projects' }">Proyectos</router-link>
+            </li>
+            <li>
+                <h2>Danils Portfolio</h2>
+            </li>
+            <li>
+                <a href="http://localhost:5173#experience">Experiencia</a>
+                <a href="http://localhost:5173#contact">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="router-nav" v-else>
         <ul>
             <li>
                 <router-link :to="{ name: 'home' }">Home</router-link>
@@ -9,8 +24,8 @@
                 <h2>Danils Portfolio</h2>
             </li>
             <li>
-                <a href="#experience">Experience</a>
-                <a href="#contact">Contact</a>
+                <a href="http://localhost:5173#experience">Experience</a>
+                <a href="http://localhost:5173#contact">Contact</a>
             </li>
         </ul>
     </nav>

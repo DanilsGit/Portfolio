@@ -1,8 +1,8 @@
 <template>
 
     <section class="goToProjects-section">
-        <h1 class="goToProjects-section-title">Here Are Some of My Creations</h1>
-        <router-link :to="{ name: 'projects' }">Explore</router-link>
+        <h1 class="goToProjects-section-title">{{ $t("message.goToProjects_title") }}</h1>
+        <router-link :to="{ name: 'projects' }">{{ $t("message.goToProjects_btn") }}</router-link>
     </section>
 
 </template>

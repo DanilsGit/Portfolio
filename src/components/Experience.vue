@@ -1,18 +1,20 @@
 <template>
     <section id="experience" class="experience-section">
-        <h1 class="experience-h1">Would You Like to Know More About Me?</h1>
-        <ExperienceSectionContent :experience="experience" />
+        <h1 class="experience-h1">{{ $t("message.experience_title") }}</h1>
+        <ExperienceSectionContent v-if="$i18n.locale=='en'" :experience="experience_en" />
+        <ExperienceSectionContent v-if="$i18n.locale=='es'" :experience="experience_es" />
     </section>
 </template>
 
 <script setup>
+
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import { onMounted } from 'vue';
 import ExperienceSectionContent from './ExperienceSectionContent.vue';
 gsap.registerPlugin(ScrollTrigger);
 
-const experience = [
+const experience_en = [
     {
         year: 2019,
         title: 'WordPress',
@@ -76,6 +78,46 @@ const experience = [
         img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/experience%2Frippio.png?alt=media&token=4f25b016-bbf0-4995-8301-66f9fc303044'
     }
 ]
+
+const experience_es = [
+    {
+        "year": 2019,
+        "title": "WordPress",
+        "description": "Mientras estudiaba antes de graduarme, también estaba aprendiendo WordPress. Esto fue crucial para nuestro negocio familiar, 'Equiservicios'. Yo era responsable de crear y publicar el sitio web, que incluía todos los métodos de contacto e información de productos. Este esfuerzo contribuyó significativamente al aumento de nuestras ganancias.",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/experience%2Fwordpress.png?alt=media&token=7ff4cf02-7134-402e-bac1-a9aabd875eb0"
+    },
+    {
+        "year": 2020,
+        "title": "Diseñador Web",
+        "description": "Cuando llegó la pandemia, todos estábamos en casa y decidí aprovechar el tiempo sumergiéndome en el desarrollo web. Pasé incontables horas aprendiendo HTML y CSS, dominando los fundamentos y creando sitios web responsivos para practicar mis habilidades. Sin embargo, no profundicé en JavaScript durante ese período. Mirando hacia atrás, me doy cuenta de que me habría beneficiado aprender Git para gestionar y guardar mi trabajo de manera más efectiva.",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/experience%2Fhtmlcss.jpg?alt=media&token=b00b8309-6709-4b21-92e8-fd65236c18e5"
+    },
+    {
+        "year": 2021,
+        "title": "La programación es poderosa",
+        "description": "Después de comenzar la universidad, desarrollé muchos proyectos de software implementando Programación Orientada a Objetos (OOP) en C++ y Java, programación funcional en Racket, y programación voraz y dinámica en Python. También trabajé extensamente con estructuras de datos. Algunos de estos proyectos están publicados en mi GitHub. Estos proyectos han sido increíblemente útiles para aprender a resolver problemas usando diferentes paradigmas.",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/experience%2Fparadigms.png?alt=media&token=93c69c47-8c01-4ac6-b2ca-349fe12feb7d"
+    },
+    {
+        "year": 2022,
+        "title": "Desarrollador Web en formación",
+        "description": "Mi pasión por el desarrollo web realmente despertó cuando descubrí JavaScript. Comencé a tomar un curso y a subir mi progreso a GitHub. En ese momento, no estaba al tanto de los frameworks existentes como React, Vue o Angular, y mucho menos de las tecnologías backend. Sin embargo, desarrollé landing pages para negocios, como Urban Cocktails. Esta oportunidad me permitió aprender a comunicarme con clientes y explicar ideas a otros.",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/experience%2Furban.png?alt=media&token=0e49c043-3fa3-4299-a0d7-40c4afb834df"
+    },
+    {
+        "year": 2023,
+        "title": "Videos en YouTube",
+        "description": "Descubrí que explicar temas a los demás me ayuda a memorizar conceptos de manera más efectiva. Al compartir conocimientos en plataformas públicas como YouTube, puedo refrescar mi comprensión mientras ayudo a otros. Sorprendentemente, este proceso también ha mejorado mis habilidades blandas, haciéndome mejor en el trabajo en equipo.",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/experience%2Fyoutube.png?alt=media&token=dd42a838-3cfc-4eb1-b1cb-213aea9f891a"
+    },
+    {
+        "year": 2024,
+        "title": "La línea nunca termina",
+        "description": "He descubierto muchas tecnologías y frameworks nuevos que se usan en el desarrollo web. Desde que aprendí JavaScript, incorporar estas tecnologías en mi base de conocimientos no ha sido difícil. Como parte de un equipo, creamos Rippio, que es mi proyecto más grande hasta la fecha. Este proyecto me permitió aprender profesionalmente React y gestionar APIs con Node.js y Express. Posteriormente, amplié mis conocimientos aprendiendo Vue, Go y Docker a través de otros proyectos. Reflexionando sobre mi progreso, me doy cuenta de que nunca dejaré de aprender. La tecnología está en constante evolución, presentando nuevas oportunidades para el crecimiento y la innovación. Estoy emocionado de seguir explorando nuevas tecnologías y frameworks, abrazando los desafíos que traen y el conocimiento que ofrecen.",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/experience%2Frippio.png?alt=media&token=4f25b016-bbf0-4995-8301-66f9fc303044"
+    }
+]
+
 
 onMounted(() => {
     const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)")
@@ -150,7 +192,8 @@ onMounted(() => {
     font-weight: 700;
     text-align: center;
 }
-.experience-section{
+
+.experience-section {
     padding-top: 25vh;
     background-color: $semi-black;
 }

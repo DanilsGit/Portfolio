@@ -1,35 +1,13 @@
 <template>
-    <div class="container">
-        <div class="active-slide">
-            <img v-for="project in projects" :src="project.img" alt="project_bg">
-        </div>
-
-
-        <div class="slider">
-            <div v-for="project in projects" class="slide" :id="`slide-${projects.indexOf(project) + 1}`">
-                <div class="slide-copy">
-                    <p>{{ project.name }}</p>
-                    <p id="index">({{ project.tech }})</p>
-                </div>
-                <button class="slide-img" @click="handleOpenLink(project.link)">
-                    <img :src="project.img" alt="project_img">
-                    <p>{{ project.description }}</p>
-                </button>
-            </div>
-
-        </div>
-
-    </div>
+    <ProjectSlider :proj="projects_en" v-if="$i18n.locale=='en'" />
+    <ProjectSlider :proj="projects_es" v-if="$i18n.locale=='es'" />
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-gsap.registerPlugin(ScrollTrigger);
+import ProjectSlider from '../components/ProjectSlider.vue';
 
 
-const proj = [
+const projects_en = [
     {
         name: 'Rippio Food',
         description: 'Rippio is a web application that connects clients with restaurants, utilizing technologies such as React, Node.js, Express, and PostgreSQL. Users can search for restaurants and products, modify their profiles, and add products to their cart for purchasing. Restaurants can create profiles, upload and manage their products, handle orders, and manage their schedules. Rippio aims to streamline the interaction between clients and restaurants, enhancing the dining experience for all users.',
@@ -88,247 +66,67 @@ const proj = [
     }
 ]
 
-// projects será organizado de ultimo a primero
-const projects = proj.reverse();
-
-const handleOpenLink = (link) => {
-    window.open(link, '_blank');
-}
-
-onMounted(() => {
-
-    window.scrollTo(0, 0);
-    document.title = 'Projects';
-
-    const slides = gsap.utils.toArray('.slide');
-    const activeSlideImages = gsap.utils.toArray('.active-slide img');
-
-    const getInitialTranslateZ = (size) => {
-        const style = window.getComputedStyle(size);
-        const matrix = style.transform.match(/matrix3d\((.+)\)/);
-        if (matrix) {
-            const values = matrix[1].split(', ');
-            return parseFloat(values[14] || 0);
-        }
-        return 0;
+const projects_es = [
+    {
+        "name": "Rippio Food",
+        "description": "Rippio es una aplicación web que conecta a clientes con restaurantes, utilizando tecnologías como React, Node.js, Express y PostgreSQL. Los usuarios pueden buscar restaurantes y productos, modificar sus perfiles y agregar productos a su carrito para comprarlos. Los restaurantes pueden crear perfiles, subir y gestionar sus productos, manejar pedidos y administrar sus horarios. Rippio tiene como objetivo agilizar la interacción entre clientes y restaurantes, mejorando la experiencia gastronómica para todos los usuarios.",
+        "tech": "REACT POSTGRESQL NODE.JS EXPRESS.JS",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Frippio.png?alt=media&token=6604df66-e07f-4d40-bbbb-785af00ef46d",
+        "link": "https://github.com/DanilsGit/Rippio"
+    },
+    {
+        "name": "Gymstats",
+        "description": "GymStats es una aplicación web construida con VUE, GO, DOCKER, POSTGRESQL y AWS diseñada para ayudarte a rastrear y gestionar tus rutinas de ejercicio de manera efectiva. Con GymStats, puedes crear y ver rutinas de ejercicio desde cualquier parte del mundo usando tu dispositivo móvil o computadora. La aplicación te permite personalizar tus rutinas con los ejercicios de tu preferencia y ajustar series según tu progreso. Además, puedes añadir notas a los ejercicios para recordar detalles específicos.",
+        "tech": "VUE GO DOCKER POSTGRESQL AWS",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fgymstats.png?alt=media&token=2b847b2f-bedf-4dba-a410-ebc7c55bd020",
+        "link": "https://github.com/DanilsGit/gym-stats.git"
+    },
+    {
+        "name": "Autómata Celular",
+        "description": "Este proyecto es una simulación de autómata celular con tres estados, desarrollada usando React y JavaScript. La simulación representa tres grupos políticos, permitiendo a los usuarios observar la segregación política. La interfaz incluye opciones para avanzar la simulación una iteración a la vez, iniciar la simulación y reiniciarla. Esta visualización ayuda a ilustrar cómo la segregación política puede evolucionar con el tiempo en función de las condiciones iniciales y las reglas de interacción.",
+        "tech": "REACT JS",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fvida.png?alt=media&token=7690e2c0-a91c-4ec7-9176-a612b65f26e3",
+        "link": "https://github.com/jfmonsa/capitalism_simulator"
+    },
+    {
+        "name": "Métodos Numéricos",
+        "description": "Este proyecto es una aplicación de métodos numéricos desarrollada usando Python, Tkinter y Matplotlib. Permite a los usuarios resolver ecuaciones dentro de un rango dado utilizando métodos como bisección, punto fijo y ajuste de curvas. La interfaz proporciona representaciones visuales de las soluciones, lo que facilita la comprensión del comportamiento de las funciones. Los usuarios pueden ingresar sus funciones e intervalos, y la aplicación calculará y mostrará las soluciones junto con gráficos detallados.",
+        "tech": "PYTHON TKINTER",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fmetodos.png?alt=media&token=a6fe3780-5a95-4e68-abfd-2a2a31a1bced",
+        "link": "https://github.com/DanilsGit/learning/blob/main/M%C3%A9todos%20Num%C3%A9ricos%20en%20py/metodos.py"
+    },
+    {
+        "name": "Gestor de Tienda",
+        "description": "Este proyecto es un sistema de gestión de tienda desarrollado usando Java y PostgreSQL. Cuenta con una interfaz CRUD (Crear, Leer, Actualizar, Eliminar) que permite a los empleados gestionar varios aspectos de la tienda. Los empleados pueden iniciar sesión con su ID y contraseña para acceder al sistema. Este sistema agiliza los procesos de gestión dentro de la tienda, facilitando a los empleados el manejo eficiente de sus tareas diarias.",
+        "tech": "JAVA POSTGRESQL",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fmibarrio.png?alt=media&token=b978a437-96b5-4a3f-a2eb-bf100dba55dc",
+        "link": "https://github.com/DanilsGit/Store-Manager"
+    },
+    {
+        "name": "Calculadora de Vacaciones",
+        "description": "La Calculadora de Vacaciones es una aplicación simple desarrollada en Java que ayuda a calcular los días de vacaciones para los empleados según su departamento y antigüedad. Cuenta con una interfaz fácil de usar, lo que facilita a los clientes y departamentos más antiguos determinar el número de días de vacaciones a los que un empleado tiene derecho.",
+        "tech": "Java",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fpepsi.png?alt=media&token=83a526e4-7f93-42cf-bc9c-d7137f2a75e9",
+        "link": "https://github.com/DanilsGit/Vacation-Calculator-Pepsi"
+    },
+    {
+        "name": "Gestor de Hospital",
+        "description": "La aplicación Gestor de Hospital es una aplicación basada en consola desarrollada en C++ diseñada para gestionar de manera eficiente varios perfiles hospitalarios. Permite la creación, lectura, actualización y eliminación (CRUD) de perfiles como gerentes, profesionales, personal de salud, recepcionistas y pacientes, todo a través de una simple interfaz de consola. Esta aplicación no utiliza una interfaz gráfica de usuario (GUI) ni APIs REST, asegurando una operación y gestión de datos sencillas. Ideal para escenarios que requieren una solución sin complicaciones basada en consola, la aplicación Gestor de Hospital proporciona un enfoque simplificado para manejar tareas de gestión hospitalaria de manera efectiva.",
+        "tech": "C++ OOP",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fgestion%20de%20hospital.png?alt=media&token=bf8673bf-0151-4a81-af15-968bc2dcad5e",
+        "link": "https://github.com/DanilsGit/Hospital-Manager"
+    },
+    {
+        "name": "Calculadora",
+        "description": "La aplicación Calculadora es una aplicación Java que emula la funcionalidad de la calculadora de Windows, ofreciendo operaciones básicas. Incluye funciones aritméticas estándar como suma, resta, multiplicación y división, junto con operaciones más complejas como cálculos de potencia (pow). La aplicación también cuenta con botones 'C' (borrar) y 'CE' (borrar entrada) para un manejo eficiente de errores. Diseñada para operaciones continuas, permite a los usuarios realizar múltiples cálculos en secuencia sin reiniciar la aplicación, proporcionando una experiencia fluida y fácil de usar.",
+        "tech": "JAVA",
+        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fcalculadora.png?alt=media&token=a963288c-bf01-46bc-add6-ec01d988a1f1",
+        "link": "https://github.com/DanilsGit/Basic-Calculator"
     }
+]
 
-    const mapRange = (value, inMin, inMax, outMin, outMax) => {
-        return ((value - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
-    }
-
-    slides.forEach((slide, index) => {
-        const initialZ = getInitialTranslateZ(slide);
-        ScrollTrigger.create({
-            trigger: ".container",
-            start: "top top",
-            end: "bottom bottom",
-            scrub: true,
-            onUpdate: (self) => {
-                const progress = self.progress;
-                const zIncrement = progress * 22500;
-                const currentZ = initialZ + zIncrement;
-
-                let opacity;
-                if (currentZ > -2500) {
-                    opacity = mapRange(currentZ, -2500, 0, 0.5, 1);
-                } else {
-                    opacity = mapRange(currentZ, -5000, -2500, 0, 0.5);
-                }
-
-                slide.style.opacity = opacity;
-                slide.style.transform = `translate(-50%, -50%) translateZ(${currentZ}px)`;
-
-                if (currentZ < 100) {
-                    gsap.to(activeSlideImages[index], 1.5, {
-                        opacity: 1,
-                        ease: "power3.out",
-                    })
-                } else {
-                    gsap.to(activeSlideImages[index], 1.5, {
-                        opacity: 0,
-                        ease: "power3.out"
-                    })
-
-                }
-            }
-        })
-    })
-
-})
 
 </script>
 
-<style scoped lang="scss">
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-a,
-p {
-    color: $accent-orange;
-    font-family: $font-basisGrotesque;
-    text-transform: uppercase;
-    font-size: 1em;
-}
-
-.container {
-    width: 100%;
-    height: 2000vh;
-}
-
-.active-slide {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: #000;
-    opacity: 0.05;
-    z-index: -1;
-
-    img {
-        position: absolute;
-        filter: blur(50%);
-        transform: scale(1.125);
-    }
-}
-
-.slider {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    transform-style: preserve-3d;
-    perspective: 750px;
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    width: 400px;
-    height: 500px;
-    opacity: 0;
-
-    .slide-img {
-        position: relative;
-        background-color: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-
-        p {
-            position: absolute;
-            padding: 1em;
-            top: 0;
-            font-weight: 500;
-            font-size: 1.5em;
-            opacity: 0;
-            text-transform: none;
-            text-align: left;
-            color: $semi-white;
-        }
-    }
-
-    .slide-img:hover {
-        p {
-            background-color: $transparent-black;
-            opacity: 1;
-            transition: 1s;
-        }
-    }
-
-}
-
-.slide-copy {
-    p {
-        text-transform: uppercase;
-        text-align: center;
-        font-family: $font-PPMonumentExtended;
-        font-size: 1em;
-        font-weight: bolder;
-        line-height: 150%;
-        color: accent-orange;
-    }
-
-    img {
-        width: 100%;
-        height: 300px !important;
-        object-fit: cover;
-    }
-
-    p#index {
-        font-family: $font-basisGrotesque;
-        font-size: 0.8em;
-        font-weight: normal;
-        font-weight: 400;
-        margin-bottom: 0.75em;
-    }
-}
-
-#slide-1 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%) translateZ(-17500px);
-}
-
-#slide-2 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%) translateZ(-15000px);
-    opacity: 0;
-}
-
-#slide-3 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%) translateZ(-12500px);
-}
-
-#slide-4 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%) translateZ(-10000px);
-    opacity: 0;
-}
-
-#slide-5 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%) translateZ(-7500px);
-}
-
-#slide-6 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%) translateZ(-5000px);
-    opacity: 0.5;
-}
-
-#slide-7 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%) translateZ(-2500px);
-    opacity: 1;
-}
-
-#slide-8 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%) translateZ(0px);
-    opacity: 1;
-}
-
-
+<style>
 </style>

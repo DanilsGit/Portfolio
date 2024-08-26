@@ -1,7 +1,7 @@
 <template>
 
     <section class="technologies-section">
-        <h1 class="technologies-title">There's always something new to learn</h1>
+        <h1 class="technologies-title">{{ $t("message.skills_title") }}</h1>
         <GsapBox />
     </section>
 </template>
@@ -57,5 +57,9 @@ onMounted(() => {
     width: 100%;
     overflow: hidden;
     background-color: $semi-black;
+
+    position: relative;
+    z-index: 1;
+    padding: 1em 0em;
 }
 </style>

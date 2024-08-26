@@ -2,17 +2,17 @@
 
     <section id="contact" class="contact-section">
         <div v-if="!sent">
-            <h1>Contact</h1>
-            <p>Feel free to contact me at</p>
+            <h1>{{ $t("contact.title") }}</h1>
+            <p>{{ $t("contact.subtitle") }}</p>
 
             <form @submit="onSubmit">
-                <input type="email" placeholder="Email" required name="email" />
-                <input type="text" placeholder="Subject" required name="subject" />
-                <textarea placeholder="Message" required name="message"></textarea>
-                <button v-if="!loading">Send</button>
+                <input type="email" :placeholder="t('contact.email_text')" required name="email" />
+                <input type="text" :placeholder="t('contact.email_subject')" required name="subject" />
+                <textarea :placeholder="t('contact.email_content')" required name="message"></textarea>
+                <button v-if="!loading">{{ $t("contact.button") }}</button>
                 <div class="wait_container" v-else>
                     <button class="loading" disabled>⌛</button>
-                    <p>Please wait, it may take a few seconds... or minutes... but not hours</p>
+                    <p>{{ $t("contact.wait") }}</p>
                 </div>
                 <p style="color: red;">
                     {{ err }}
@@ -23,8 +23,8 @@
         </div>
 
         <div v-else>
-            <h1>Thank you for your message!</h1>
-            <p>I will get back to you as soon as possible.</p>
+            <h1>{{ $t("contact.sent_title") }}</h1>
+            <p>{{ $t("contact.sent_content") }}</p>
         </div>
 
     </section>
@@ -38,6 +38,9 @@ import { ref } from 'vue';
 const loading = ref(false);
 const err = ref('');
 const sent = ref(false);
+
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
 
 const onSubmit = async (e) => {
     e.preventDefault();

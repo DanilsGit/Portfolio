@@ -203,8 +203,8 @@ onMounted(() => {
 
 .box {
     opacity: 1;
-    width: 6em;
-    height: 6em;
+    width: 5em;
+    height: 5em;
     aspect-ratio: 1/1;
 
     @media screen and (max-width: 900px) {

@@ -117,18 +117,18 @@ onMounted(() => {
 
 .left {
     width: 50%;
-    border-left: 4px solid #000;
-    margin-left: 2em;
+    border-left: 4px solid #fff;
+    margin-left: 3em;
     position: relative;
 }
 
 .startExperience {
-    background-color: #000;
+    background-color: #fff;
     border-radius: 50%;
-    width: 4em;
-    height: 4em;
-    top: -2em;
-    left: -2em;
+    width: 3em;
+    height: 3em;
+    top: -1.6em;
+    left: -1.6em;
     position: absolute;
 }
 
