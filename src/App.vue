@@ -9,8 +9,8 @@
                 <h2>Danils Portfolio</h2>
             </li>
             <li>
-                <a href="http://localhost:5173#experience">Experiencia</a>
-                <a href="http://localhost:5173#contact">Contacto</a>
+                <a href="https://danilsportfolio.netlify.app/#experience">Experiencia</a>
+                <a href="https://danilsportfolio.netlify.app/#contact">Contacto</a>
             </li>
         </ul>
     </nav>
@@ -24,8 +24,8 @@
                 <h2>Danils Portfolio</h2>
             </li>
             <li>
-                <a href="http://localhost:5173#experience">Experience</a>
-                <a href="http://localhost:5173#contact">Contact</a>
+                <a href="https://danilsportfolio.netlify.app/#experience">Experience</a>
+                <a href="https://danilsportfolio.netlify.app/#contact">Contact</a>
             </li>
         </ul>
     </nav>
