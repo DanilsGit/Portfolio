@@ -54,6 +54,7 @@
     gap: 1em;
     border: 0.14em solid #39434f;
     border-radius: 0.6em;
+    padding: 0.2em;
 
     button {
         background-color: transparent;

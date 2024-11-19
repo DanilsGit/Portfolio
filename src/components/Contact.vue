@@ -9,7 +9,7 @@
                 <input type="email" :placeholder="t('contact.email_text')" required name="email" />
                 <input type="text" :placeholder="t('contact.email_subject')" required name="subject" />
                 <textarea :placeholder="t('contact.email_content')" required name="message"></textarea>
-                <button v-if="!loading">{{ $t("contact.button") }}</button>
+                <button class="send_btn" v-if="!loading">{{ $t("contact.button") }}</button>
                 <div class="wait_container" v-else>
                     <button class="loading" disabled>⌛</button>
                     <p>{{ $t("contact.wait") }}</p>
@@ -129,6 +129,27 @@ p {
             border-radius: 5px;
             background-color: $semi-white;
             cursor: pointer;
+        }
+
+        .send_btn {
+            font-family: 'Exo 2', sans-serif;
+            color: #000;
+            padding: 0.5em 1em;
+            border-radius: 0.5em;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1em;
+            width: 20em;
+            background-color: #fff;
+            border: 2px solid #fff;
+
+            &:hover {
+                background-color: transparent;
+                border: none;
+                color: #fff;
+                border-bottom: #fff 2px solid;
+                border-radius: 0;
+            }
         }
 
         .wait_container {

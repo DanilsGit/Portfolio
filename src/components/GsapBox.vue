@@ -54,7 +54,7 @@
             </div>
             <div class="java box">
                 <img draggable='false'
-                    src="https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/technologies%2Fjava.png?alt=media&token=aed115e1-e2f7-4e06-a7d7-5d7c28b1bffe">
+                    src="https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/technologies%2Fjava.jpg?alt=media&token=bc18705c-d432-46e6-abd5-aa20a1739062">
             </div>
             <div class="c++ box">
                 <img draggable='false'

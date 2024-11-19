@@ -3,8 +3,8 @@ export const messages = {
         message: {
             presentation_title: "Hi, I'm Danils. Web developer 🧶",
             about_title : "About me",
-            about_content: "I am a dedicated web developer with a passion for creating functional and engaging websites. My experience spans multiple programming languages, including Java, C++, and Python, enabling me to build diverse and robust software solutions. I am proficient in modern frontend frameworks like Vue.js and React.js, which I utilize to enhance user experiences and interface design. Additionally, I enjoy sharing my knowledge on my YouTube channel, where I cover various topics related to boolean division algorithms, unit conversions, binary adders, protoboard usage, automata, isomorphic graphs, regular graphs, bipartite graphs, and Dijkstra's algorithm. I also take pleasure in solving logic problems with Java, continually seeking opportunities to learn new technologies and improve my skills.",
-            skills_title: "There's always something new to learn",
+            about_content: "I am a dedicated web developer with a passion for creating functional and attractive websites. My experience covers multiple technologies, allowing me to build diverse and robust software solutions. I am proficient in full-stack development, primarily mastering JavaScript/Typescript, Firebase, AWS, PostgreSQL, and other tools and languages that I use to enhance user experience and interface design. Additionally, I enjoy sharing my knowledge on my YouTube channel and solving logical problems.",
+            skills_title: "My mastered technologies",
             goToProjects_title: "Here Are Some of My Creations",
             goToProjects_btn: "Explore",
             experience_title: "Would You Like to Know More About Me?"
@@ -25,8 +25,8 @@ export const messages = {
         message: {
             presentation_title: "Soy Danils. Desarrollador web🧶",
             about_title: "Sobre mi",
-            about_content: "Soy un desarrollador web dedicado con una pasión por la creación de sitios web funcionales y atractivos. Mi experiencia abarca múltiples lenguajes de programación, incluyendo Java, C++ y Python, lo que me permite construir soluciones de software diversas y robustas. Soy competente en frontend moderno como Vue.js y React.js, que utilizo para mejorar la experiencia del usuario y el diseño de la interfaz. interfaz. Además, disfruto compartiendo mis conocimientos en mi canal de YouTube, donde cubro diversos temas relacionados con algoritmos de división booleana, conversiones de unidades, sumadores binarios, uso de protoboard, autómatas, grafos isomórficos, grafos regulares, grafos bipartitos y el algoritmo de Dijkstra. de Dijkstra. También me gusta resolver problemas lógicos con Java, buscando continuamente oportunidades para aprender nuevas tecnologías y mejorar mis conocimientos. tecnologías y mejorar mis habilidades. ",
-            skills_title: "Siempre hay algo nuevo que aprender",
+            about_content: "Soy un desarrollador web dedicado con una pasión por la creación de sitios web funcionales y atractivos. Mi experiencia abarca múltiples tecnologías, lo que me permite construir soluciones de software diversas y robustas. Soy competente en fullstack dominando principalmente Javascript/Typescript, Firebase, AWS, Postgresql y demás herramientas y lenguajes que utilizo para mejorar la experiencia del usuario y el diseño de interfaces. Además, disfruto compartiendo mis conocimientos en mi canal de YouTube y resolviendo problemas lógicos.",
+            skills_title: "Mis tecnologías dominadas",
             goToProjects_title: "Aquí encuentras mis creaciones",
             goToProjects_btn: "Explorar",
             experience_title: "¿Te gustaría conocer más acerca de mi?"

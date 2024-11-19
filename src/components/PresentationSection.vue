@@ -2,7 +2,6 @@
 
     <section class="presentation-section">
 
-
         <h1>{{ $t("message.presentation_title") }}</h1>
 
 
@@ -16,12 +15,18 @@
 
             <div class="end-lottie"></div>
 
-            <h1>{{ $t("message.about_title") }}</h1>
+            <div class="about_git_cv">
+                <div>
+                    <h1>{{ $t("message.about_title") }}</h1>
 
-            <p>{{ $t("message.about_content") }}</p>
+                    <p>{{ $t("message.about_content") }}</p>
+                </div>
+
+                <CVButton />
+            </div>
+
         </section>
     </section>
-
 </template>
 
 <script setup>
@@ -30,6 +35,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import lottie from 'lottie-web';
 gsap.registerPlugin(ScrollTrigger);
 import { nextTick, onMounted } from 'vue';
+import CVButton from './buttons/CVButton.vue';
 
 
 onMounted(async () => {
@@ -163,11 +169,22 @@ p {
     position: relative;
     width: 100%;
     height: 26%;
-    min-height: 90vh;
+    min-height: 150vh;
     padding: 2em;
     background-color: $semi-black;
     color: $semi-white;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_git_cv {
+    width: 75%;
+    gap: 5em;
+    display: flex;
+    flex-direction: column;
 }
 
 .end-lottie {
