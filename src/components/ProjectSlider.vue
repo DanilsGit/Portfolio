@@ -6,7 +6,13 @@
 
 
         <div class="slider">
-            <div v-for="project in projects" class="slide" :id="`slide-${projects.indexOf(project) + 1}`">
+            <div v-for="project in projects" class="slide" :id="`slide-${projects.indexOf(project) + 1}`" :style="{
+                transform: `translate(-50%, -50%) translateZ(${calculateTranslateZ(projects.indexOf(project))}px)`,
+                position: 'absolute',
+                top: '50%',
+                left: isEven(projects.indexOf(project)) ? '70%' : '30%',
+                opacity: calculateOpacity(projects.indexOf(project))
+            }">
                 <div class="slide-copy">
                     <p>{{ project.name }}</p>
                     <p id="index">({{ project.tech }})</p>
@@ -30,11 +36,25 @@ gsap.registerPlugin(ScrollTrigger);
 const props = defineProps({
     proj: Array
 })
-
-
-
 // projects será organizado de ultimo a primero
 const projects = props.proj.reverse();
+
+const calculateTranslateZ = (index) => {
+    return (((projects.length - 1) * -2500) + 2500 * index);
+}
+
+const isEven = (index) => {
+    return index % 2 === 0;
+}
+
+const calculateOpacity = (index) => {
+    if (index === projects.length - 1) return 1;
+    if (index === projects.length - 2) return 1;
+    if (index === projects.length - 3) return 0.5;
+    return 0;
+}
+
+
 
 const handleOpenLink = (link) => {
     window.open(link, '_blank');
@@ -214,66 +234,15 @@ p {
     }
 }
 
-#slide-1 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%) translateZ(-17500px);
-}
-
-#slide-2 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%) translateZ(-15000px);
-    opacity: 0;
-}
-
-#slide-3 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%) translateZ(-12500px);
-}
-
-#slide-4 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%) translateZ(-10000px);
-    opacity: 0;
-}
-
-#slide-5 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%) translateZ(-7500px);
-}
-
 #slide-6 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%) translateZ(-5000px);
     opacity: 0.5;
 }
 
 #slide-7 {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%) translateZ(-2500px);
     opacity: 1;
 }
 
 #slide-8 {
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%) translateZ(0px);
     opacity: 1;
 }
-
-
 </style>

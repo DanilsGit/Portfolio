@@ -1,6 +1,6 @@
 <template>
-    <ProjectSlider :proj="projects_en" v-if="$i18n.locale=='en'" />
-    <ProjectSlider :proj="projects_es" v-if="$i18n.locale=='es'" />
+    <ProjectSlider :proj="projects_en" v-if="$i18n.locale == 'en'" />
+    <ProjectSlider :proj="projects_es" v-if="$i18n.locale == 'es'" />
 </template>
 
 <script setup>
@@ -8,6 +8,13 @@ import ProjectSlider from '../components/ProjectSlider.vue';
 
 
 const projects_en = [
+    {
+        name: "Liryca",
+        description: "Liryca is a music app built with React Native that allows users to play songs, create playlists, and save albums. What makes it unique is its integrated social network, where users can interact and share their thoughts on emerging songs. Artists can sign up and manage their own albums, all within an intuitive and modern interface.",
+        tech: "REACT NATIVE, FIREBASE, LARAVEL, MYSQL, AZURE DEVOPS",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2FlyricaLogoPortfolio.png?alt=media&token=1a8df798-8ee6-4f7b-b1fb-56963e1351df",
+        link: "https://github.com/DanilsGit/liryca"
+    },
     {
         name: 'Rippio Food',
         description: 'Rippio is a web application that connects clients with restaurants, utilizing technologies such as React, Node.js, Express, and PostgreSQL. Users can search for restaurants and products, modify their profiles, and add products to their cart for purchasing. Restaurants can create profiles, upload and manage their products, handle orders, and manage their schedules. Rippio aims to streamline the interaction between clients and restaurants, enhancing the dining experience for all users.',
@@ -68,65 +75,71 @@ const projects_en = [
 
 const projects_es = [
     {
-        "name": "Rippio Food",
-        "description": "Rippio es una aplicación web que conecta a clientes con restaurantes, utilizando tecnologías como React, Node.js, Express y PostgreSQL. Los usuarios pueden buscar restaurantes y productos, modificar sus perfiles y agregar productos a su carrito para comprarlos. Los restaurantes pueden crear perfiles, subir y gestionar sus productos, manejar pedidos y administrar sus horarios. Rippio tiene como objetivo agilizar la interacción entre clientes y restaurantes, mejorando la experiencia gastronómica para todos los usuarios.",
-        "tech": "REACT POSTGRESQL NODE.JS EXPRESS.JS",
-        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Frippio.png?alt=media&token=6604df66-e07f-4d40-bbbb-785af00ef46d",
-        "link": "https://github.com/DanilsGit/Rippio"
+        name: "Liryca",
+        description: "Liryca es una aplicación de música construida con React Native que permite a los usuarios reproducir canciones, crear playlists y guardar álbumes. Lo que la hace única es su red social integrada, donde los usuarios pueden interactuar y compartir ideas sobre canciones emergentes. Los artistas pueden registrarse y gestionar sus propios álbumes, todo en un entorno amigable y moderno.",
+        tech: "REACT NATIVE, FIREBASE, LARAVEL, MYSQL, AZURE DEVOPS",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2FlyricaLogoPortfolio.png?alt=media&token=1a8df798-8ee6-4f7b-b1fb-56963e1351df",
+        link: "https://github.com/DanilsGit/liryca"
     },
     {
-        "name": "Gymstats",
-        "description": "GymStats es una aplicación web construida con VUE, GO, DOCKER, POSTGRESQL y AWS diseñada para ayudarte a rastrear y gestionar tus rutinas de ejercicio de manera efectiva. Con GymStats, puedes crear y ver rutinas de ejercicio desde cualquier parte del mundo usando tu dispositivo móvil o computadora. La aplicación te permite personalizar tus rutinas con los ejercicios de tu preferencia y ajustar series según tu progreso. Además, puedes añadir notas a los ejercicios para recordar detalles específicos.",
-        "tech": "VUE GO DOCKER POSTGRESQL AWS",
-        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fgymstats.png?alt=media&token=2b847b2f-bedf-4dba-a410-ebc7c55bd020",
-        "link": "https://github.com/DanilsGit/gym-stats.git"
+        name: "Rippio Food",
+        description: "Rippio es una aplicación web que conecta a clientes con restaurantes, utilizando tecnologías como React, Node.js, Express y PostgreSQL. Los usuarios pueden buscar restaurantes y productos, modificar sus perfiles y agregar productos a su carrito para comprarlos. Los restaurantes pueden crear perfiles, subir y gestionar sus productos, manejar pedidos y administrar sus horarios. Rippio tiene como objetivo agilizar la interacción entre clientes y restaurantes, mejorando la experiencia gastronómica para todos los usuarios.",
+        tech: "REACT POSTGRESQL NODE.JS EXPRESS.JS",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Frippio.png?alt=media&token=6604df66-e07f-4d40-bbbb-785af00ef46d",
+        link: "https://github.com/DanilsGit/Rippio"
     },
     {
-        "name": "Autómata Celular",
-        "description": "Este proyecto es una simulación de autómata celular con tres estados, desarrollada usando React y JavaScript. La simulación representa tres grupos políticos, permitiendo a los usuarios observar la segregación política. La interfaz incluye opciones para avanzar la simulación una iteración a la vez, iniciar la simulación y reiniciarla. Esta visualización ayuda a ilustrar cómo la segregación política puede evolucionar con el tiempo en función de las condiciones iniciales y las reglas de interacción.",
-        "tech": "REACT JS",
-        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fvida.png?alt=media&token=7690e2c0-a91c-4ec7-9176-a612b65f26e3",
-        "link": "https://github.com/jfmonsa/capitalism_simulator"
+        name: "Gymstats",
+        description: "GymStats es una aplicación web construida con VUE, GO, DOCKER, POSTGRESQL y AWS diseñada para ayudarte a rastrear y gestionar tus rutinas de ejercicio de manera efectiva. Con GymStats, puedes crear y ver rutinas de ejercicio desde cualquier parte del mundo usando tu dispositivo móvil o computadora. La aplicación te permite personalizar tus rutinas con los ejercicios de tu preferencia y ajustar series según tu progreso. Además, puedes añadir notas a los ejercicios para recordar detalles específicos.",
+        tech: "VUE GO DOCKER POSTGRESQL AWS",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fgymstats.png?alt=media&token=2b847b2f-bedf-4dba-a410-ebc7c55bd020",
+        link: "https://github.com/DanilsGit/gym-stats.git"
     },
     {
-        "name": "Métodos Numéricos",
-        "description": "Este proyecto es una aplicación de métodos numéricos desarrollada usando Python, Tkinter y Matplotlib. Permite a los usuarios resolver ecuaciones dentro de un rango dado utilizando métodos como bisección, punto fijo y ajuste de curvas. La interfaz proporciona representaciones visuales de las soluciones, lo que facilita la comprensión del comportamiento de las funciones. Los usuarios pueden ingresar sus funciones e intervalos, y la aplicación calculará y mostrará las soluciones junto con gráficos detallados.",
-        "tech": "PYTHON TKINTER",
-        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fmetodos.png?alt=media&token=a6fe3780-5a95-4e68-abfd-2a2a31a1bced",
-        "link": "https://github.com/DanilsGit/learning/blob/main/M%C3%A9todos%20Num%C3%A9ricos%20en%20py/metodos.py"
+        name: "Autómata Celular",
+        description: "Este proyecto es una simulación de autómata celular con tres estados, desarrollada usando React y JavaScript. La simulación representa tres grupos políticos, permitiendo a los usuarios observar la segregación política. La interfaz incluye opciones para avanzar la simulación una iteración a la vez, iniciar la simulación y reiniciarla. Esta visualización ayuda a ilustrar cómo la segregación política puede evolucionar con el tiempo en función de las condiciones iniciales y las reglas de interacción.",
+        tech: "REACT JS",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fvida.png?alt=media&token=7690e2c0-a91c-4ec7-9176-a612b65f26e3",
+        link: "https://github.com/jfmonsa/capitalism_simulator"
     },
     {
-        "name": "Gestor de Tienda",
-        "description": "Este proyecto es un sistema de gestión de tienda desarrollado usando Java y PostgreSQL. Cuenta con una interfaz CRUD (Crear, Leer, Actualizar, Eliminar) que permite a los empleados gestionar varios aspectos de la tienda. Los empleados pueden iniciar sesión con su ID y contraseña para acceder al sistema. Este sistema agiliza los procesos de gestión dentro de la tienda, facilitando a los empleados el manejo eficiente de sus tareas diarias.",
-        "tech": "JAVA POSTGRESQL",
-        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fmibarrio.png?alt=media&token=b978a437-96b5-4a3f-a2eb-bf100dba55dc",
-        "link": "https://github.com/DanilsGit/Store-Manager"
+        name: "Métodos Numéricos",
+        description: "Este proyecto es una aplicación de métodos numéricos desarrollada usando Python, Tkinter y Matplotlib. Permite a los usuarios resolver ecuaciones dentro de un rango dado utilizando métodos como bisección, punto fijo y ajuste de curvas. La interfaz proporciona representaciones visuales de las soluciones, lo que facilita la comprensión del comportamiento de las funciones. Los usuarios pueden ingresar sus funciones e intervalos, y la aplicación calculará y mostrará las soluciones junto con gráficos detallados.",
+        tech: "PYTHON TKINTER",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fmetodos.png?alt=media&token=a6fe3780-5a95-4e68-abfd-2a2a31a1bced",
+        link: "https://github.com/DanilsGit/learning/blob/main/M%C3%A9todos%20Num%C3%A9ricos%20en%20py/metodos.py"
     },
     {
-        "name": "Calculadora de Vacaciones",
-        "description": "La Calculadora de Vacaciones es una aplicación simple desarrollada en Java que ayuda a calcular los días de vacaciones para los empleados según su departamento y antigüedad. Cuenta con una interfaz fácil de usar, lo que facilita a los clientes y departamentos más antiguos determinar el número de días de vacaciones a los que un empleado tiene derecho.",
-        "tech": "Java",
-        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fpepsi.png?alt=media&token=83a526e4-7f93-42cf-bc9c-d7137f2a75e9",
-        "link": "https://github.com/DanilsGit/Vacation-Calculator-Pepsi"
+        name: "Gestor de Tienda",
+        description: "Este proyecto es un sistema de gestión de tienda desarrollado usando Java y PostgreSQL. Cuenta con una interfaz CRUD (Crear, Leer, Actualizar, Eliminar) que permite a los empleados gestionar varios aspectos de la tienda. Los empleados pueden iniciar sesión con su ID y contraseña para acceder al sistema. Este sistema agiliza los procesos de gestión dentro de la tienda, facilitando a los empleados el manejo eficiente de sus tareas diarias.",
+        tech: "JAVA POSTGRESQL",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fmibarrio.png?alt=media&token=b978a437-96b5-4a3f-a2eb-bf100dba55dc",
+        link: "https://github.com/DanilsGit/Store-Manager"
     },
     {
-        "name": "Gestor de Hospital",
-        "description": "La aplicación Gestor de Hospital es una aplicación basada en consola desarrollada en C++ diseñada para gestionar de manera eficiente varios perfiles hospitalarios. Permite la creación, lectura, actualización y eliminación (CRUD) de perfiles como gerentes, profesionales, personal de salud, recepcionistas y pacientes, todo a través de una simple interfaz de consola. Esta aplicación no utiliza una interfaz gráfica de usuario (GUI) ni APIs REST, asegurando una operación y gestión de datos sencillas. Ideal para escenarios que requieren una solución sin complicaciones basada en consola, la aplicación Gestor de Hospital proporciona un enfoque simplificado para manejar tareas de gestión hospitalaria de manera efectiva.",
-        "tech": "C++ OOP",
-        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fgestion%20de%20hospital.png?alt=media&token=bf8673bf-0151-4a81-af15-968bc2dcad5e",
-        "link": "https://github.com/DanilsGit/Hospital-Manager"
+        name: "Calculadora de Vacaciones",
+        description: "La Calculadora de Vacaciones es una aplicación simple desarrollada en Java que ayuda a calcular los días de vacaciones para los empleados según su departamento y antigüedad. Cuenta con una interfaz fácil de usar, lo que facilita a los clientes y departamentos más antiguos determinar el número de días de vacaciones a los que un empleado tiene derecho.",
+        tech: "Java",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fpepsi.png?alt=media&token=83a526e4-7f93-42cf-bc9c-d7137f2a75e9",
+        link: "https://github.com/DanilsGit/Vacation-Calculator-Pepsi"
     },
     {
-        "name": "Calculadora",
-        "description": "La aplicación Calculadora es una aplicación Java que emula la funcionalidad de la calculadora de Windows, ofreciendo operaciones básicas. Incluye funciones aritméticas estándar como suma, resta, multiplicación y división, junto con operaciones más complejas como cálculos de potencia (pow). La aplicación también cuenta con botones 'C' (borrar) y 'CE' (borrar entrada) para un manejo eficiente de errores. Diseñada para operaciones continuas, permite a los usuarios realizar múltiples cálculos en secuencia sin reiniciar la aplicación, proporcionando una experiencia fluida y fácil de usar.",
-        "tech": "JAVA",
-        "img": "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fcalculadora.png?alt=media&token=a963288c-bf01-46bc-add6-ec01d988a1f1",
-        "link": "https://github.com/DanilsGit/Basic-Calculator"
+        name: "Gestor de Hospital",
+        description: "La aplicación Gestor de Hospital es una aplicación basada en consola desarrollada en C++ diseñada para gestionar de manera eficiente varios perfiles hospitalarios. Permite la creación, lectura, actualización y eliminación (CRUD) de perfiles como gerentes, profesionales, personal de salud, recepcionistas y pacientes, todo a través de una simple interfaz de consola. Esta aplicación no utiliza una interfaz gráfica de usuario (GUI) ni APIs REST, asegurando una operación y gestión de datos sencillas. Ideal para escenarios que requieren una solución sin complicaciones basada en consola, la aplicación Gestor de Hospital proporciona un enfoque simplificado para manejar tareas de gestión hospitalaria de manera efectiva.",
+        tech: "C++ OOP",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fgestion%20de%20hospital.png?alt=media&token=bf8673bf-0151-4a81-af15-968bc2dcad5e",
+        link: "https://github.com/DanilsGit/Hospital-Manager"
+    },
+    {
+        name: "Calculadora",
+        description: "La aplicación Calculadora es una aplicación Java que emula la funcionalidad de la calculadora de Windows, ofreciendo operaciones básicas. Incluye funciones aritméticas estándar como suma, resta, multiplicación y división, junto con operaciones más complejas como cálculos de potencia (pow). La aplicación también cuenta con botones 'C' (borrar) y 'CE' (borrar entrada) para un manejo eficiente de errores. Diseñada para operaciones continuas, permite a los usuarios realizar múltiples cálculos en secuencia sin reiniciar la aplicación, proporcionando una experiencia fluida y fácil de usar.",
+        tech: "JAVA",
+        img: "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/projects%2Fcalculadora.png?alt=media&token=a963288c-bf01-46bc-add6-ec01d988a1f1",
+        link: "https://github.com/DanilsGit/Basic-Calculator"
     }
 ]
 
 
 </script>
 
-<style>
-</style>
+<style></style>
