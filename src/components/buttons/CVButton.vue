@@ -5,7 +5,7 @@
 <script setup>
 // 
 const descargarPDF = () => {
-    const url = "https://firebasestorage.googleapis.com/v0/b/portfolio-38c72.appspot.com/o/CV%2FCV%20Daniel%20Marquez.pdf?alt=media&token=15b9529d-b013-49dd-b571-3df7ddf31c4e";
+    const url = import.meta.env.VITE_CV_LINK;
     const link = document.createElement("a");
     link.href = url;
     link.download = "CV_DANIEL_MARQUEZ.pdf";
